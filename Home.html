@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home_Raffaello</title>
+    <link href="Home.css" rel="stylesheet" type="text/css"/>
+    <script src="jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var i=0;
+            var clone= $("#banner #rec .img li").first().clone();
+            $("#rec .img").append(clone);
+            var size= $("#rec .img li").length;
+
+            for(var j=0;j<size-1;j++){
+                $("#rec .num").append("<li></li>");
+            }
+            $("#rec .num li").first().addClass("on");
+            var t =setInterval(function () {i++; move();},2000);
+            $("#rec").hover(function () {
+                clearInterval(t);
+                },function () {
+                t=setInterval(function(){i++;move();},2000);
+            });
+            $("#banner #rec .num li").hover(function(){
+                var index=$(this).index();
+                i=index;
+                $("#rec .img").stop().animate({left:-index * 880},500);
+                $("this").addClass("on").siblings().removeClass("on");
+            });
+            $("#rec .btn_l").click(function () {
+                i--;
+                move();
+            })
+            $("#rec .btn_r").click(function () {
+                i++;
+                move();
+            })
+            function move() {
+                if (i === size) {
+                    $("#rec .img").css({ left: 0 });
+                    i = 1;
+                }
+                if (i === -1) {
+                    $("#rec .img").css({ left: -(size - 1) * 880 });
+                    i = size - 2;
+                }
+                $("#banner #rec .img").stop().animate({ left: -i * 880 }, 500);
+
+                if (i === size - 1) {
+                    $("#rec .num li").eq(0).addClass("on").siblings().removeClass("on");
+                } else {
+                    $("#rec .num li").eq(i).addClass("on").siblings().removeClass("on");
+                }
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="nav">
+        <img src="Raffaello/image/logo.jpg" >
+        <form action="#" method="get" autocomplete="on" novalidate="novalidate">
+            <input type="text" name="searchcontent" id="input">
+            <input type="button" value="搜索" name="search" id="search">
+        </form>
+        <ul>
+            <li><a href="#">影视</a></li>
+            <li><a href="#">动漫</a></li>
+            <li><a href="#">音乐</a></li>
+            <li><a href="Section.html">游戏</a></li>
+            <li><a href="#">会员中心</a></li>
+        </ul>
+    </div>
+    <div id="banner">
+        <div id="rec">
+            <ul class="img">
+                <li><img src="Raffaello/image/banner3.webp" alt=""></li>
+                <li><img src="Raffaello/image/banner1.webp" alt=""></li>
+                <li><img src="Raffaello/image/banner2.webp" alt=""></li>
+            </ul>
+            <ul class="num"></ul>
+            <div class="btn btn_l">&lt;</div>
+            <div class="btn btn_r">&gt;</div>
+        </div>
+        <div id="hot">
+            <p class="title">热点话题<a href="#">More>>></a></p>
+            <p class="hot"><a href="#"> 复仇者联盟4：终局之战</a><span>8.7</span></p>
+            <p class="hot"><a href="#">权力的游戏 第八季</a><span>9.5</span></p>
+            <p class="hot"><a href="#">SEKIRO: SHADOWS DIE TWICE</a><span>8.9</span></p>
+            <p class="hot"><a href="#">MORTAL KOMBAT 11</a><span>8.6</span></p>
+            <p class="hot"><a href="#">鬼灭之刃</a><span>8.5</span></p>
+            <p class="hot"><a href="#">我的英雄学院：两位英雄</a><span>7.2</span></p>
+            <p class="hot"><a href="#">jojo的奇妙冒险 黄金之风</a><span>9.6</span></p>
+            <p class="hot"><a href="#">波西米亚狂想曲</a><span>8.7</span></p>
+            <p class="hot"><a href="#">Before I Cry</a><span>8.6</span></p>
+            <p class="hot"><a href="#">CAROLE & TUESDAY</a><span>9.4</span></p>
+            <p class="hot"><a href="#">Mariners Apartment Complex</a><span>8.6</span></p>
+            <p class="hot"><a href="#">ANNO 1800</a><span>7.8</span></p>
+            <p class="hot"><a href="#">DEVIL MAY CRY 5</a> <span>8.7</span></p>
+            <p class="hot"><a href="#">文豪野犬 第三季</a> <span>9.1</span></p>
+        </div>
+    </div>
+    <div id="rank">
+        <ul>
+            <li class="vertical"><p class="head">影视<span><a href="#">More>>></a> </span></p>
+                <ul>
+                    <li><a href="#"><img src="Raffaello/image/p2552058346.webp"><p>复仇者联盟4：终局之战</p></a></li>
+                    <li><a href="#"><img src="Raffaello/image/bxmy.jpg"><p>波西米亚狂想曲</p></a></li>
+                    <li><a href="#"><img src="Raffaello/image/got.webp"><p>权力的游戏 第八季</p></a></li>
+                    <li><a href="#"><img src="Raffaello/image/m3.jpg"><p>我的名字是：穆罕穆德·阿里</p></a></li>
+                    <li><a href="#"><img src="Raffaello/image/m5.jpg"><p>拉米 第一季</p></a></li>
+                    <li><a href="#"><img src="Raffaello/image/m6.jpg"><p>归家：碧昂斯</p></a></li>
+                </ul>
+            </li>
+            <li class="vertical"><p class="head">动漫<span><a href="#">More>>></a> </span></p>
+                <ul>
+                    <li><a href="#"><img src="Raffaello/image/twoheros.webp"><p>我的英雄学院：两位英雄</p></a></li>
+                    <li><a href="#"><img src="Raffaello/image/gmzr.webp"><p>鬼灭之刃</p></a></li>
+                    <li><a href="#"><img src="Raffaello/image/CAROLE%20&%20TUESDAY.webp"><p>CAROLE & TUESDAY</p></a></li>
+                    <li><a href="#"><img src="Raffaello/image/a4.webp"><p>文豪野犬 第三季</p></a></li>
+                    <li><a href="#"><img src="Raffaello/image/a5.webp"><p>jojo的奇妙冒险 黄金之风</p></a></li>
+                    <li><a href="#"><img src="Raffaello/image/a6.webp"><p>进击的巨人 第三季</p> </a></li>
+                </ul>
+            </li>
+            <li class="vertical"><p class="head">音乐<span><a href="#">More>>></a> </span></p>
+                <ul>
+                    <li><a href="#"><img src="Raffaello/image/mu1.jpg"><p>Lemon</p> </a></li>
+                    <li><a href="#"><img src="Raffaello/image/mu2.jpg"><p>Venice Bitch</p> </a></li>
+                    <li><a href="#"><img src="Raffaello/image/mu3.jpg"><p>岁月</p> </a></li>
+                    <li><a href="#"><img src="Raffaello/image/mu4.jpg"><p>Mariners Apartment </p></a></li>
+                    <li><a href="#"><img src="Raffaello/image/mu5.jpg"><p>Before I Cry</p> </a></li>
+                    <li><a href="#"><img src="Raffaello/image/mu6.jpg"><p>年少有为</p> </a></li>
+                </ul>
+            </li>
+            <li class="vertical"><p class="head">游戏<span><a href="#">More>>></a> </span></p>
+                <ul>
+                    <li><a href="#"><img src="Raffaello/image/g1.jpg"><p>SEKIRO: SHADOWS DIE TWICE</p></a></li>
+                    <li><a href="#"><img src="Raffaello/image/g2.jpg"><p>DEVIL MAY CRY 5</p> </a></li>
+                    <li><a href="#"><img src="Raffaello/image/g3.jpg"><p>APEX LEGENDS</p> </a></li>
+                    <li><a href="#"><img src="Raffaello/image/g4.jpg"><p>MORTAL KOMBAT 11</p></a></li>
+                    <li><a href="#"><img src="Raffaello/image/g5.jpg"><p>ANNO 1800</p> </a></li>
+                    <li><a href="#"><img src="Raffaello/image/g6.jpg"><p>ACE COMBAT 7: SKIES UNKNOWN</p> </a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div id="footer">
+        <ul>
+            <li><a href="#">影视</a></li>
+            <li><a href="#">动漫</a></li>
+            <li><a href="#">音乐</a></li>
+            <li><a href="#">游戏</a></li>
+            <li><a href="#">联系我们</a></li>
+        </ul>
+            <P>By Raffaello Sun</P>
+            <p> © 2019 CBS Interactive Inc. All rights reserved.</p>
+    </div>
+</body>
+</html>

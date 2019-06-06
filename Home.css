@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+input{
+    display: block;
+    float:left;
+}
+body{
+    font-size: medium;
+    background-attachment: fixed;
+}
+#nav{
+    font-size: 24px;
+    height: 50px;
+    background-color: #00000099;
+}
+#nav img{
+    width: 80px;
+    height: 48px;
+    float: left;
+    border: black 1px solid;
+    border-radius: 5px;
+}
+#nav form{
+    width: 40%;
+    height: 50px;
+    padding-left: 80px;
+    float: left;
+}
+#nav form #input{
+    width: 80%;
+    height: 30px;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+#nav form #search{
+    margin-left: 20px;
+    font-size: 16px;
+    height: 30px;
+    width: 10%;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+#nav ul{
+    width: 45%;
+    margin: 0;
+    list-style: none;
+    float: right;
+}
+#nav ul li{
+    height: 50px;
+    line-height: 50px;
+    width: 20%;
+    text-align: center;
+    float: left;
+}
+#nav ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: #eeeeee;
+}
+#nav ul li a:hover{
+    color: #edcb3c;
+}
+#footer{
+    height: 200px;
+    background: #00000099;
+    color: white;
+}
+#footer ul{
+    width: 600px;
+    height: 120px;
+    margin: 0 auto;
+    line-height: 120px;
+    list-style: none;
+}
+#footer ul li{
+    margin-left: 50px;
+    float: left;
+}
+#footer ul li a{
+    font-size: 24px;
+    text-decoration: none;
+    color: white;
+}
+#footer ul li a:hover{
+    color: #edcb3c;
+}
+#footer p{
+    margin: 0 auto;
+    width: 400px;
+    text-align: center;
+}
+#banner{
+    width: 1152px;
+    height: 600px;
+    margin:20px auto;
+    padding-bottom: 20px;
+    border-bottom: #eade90 1px solid;
+}
+#rec{
+    height: 600px;
+    width: 880px;
+    float:left;
+    position: relative;
+    overflow: hidden;
+}
+#rec .img{
+    position: relative;
+    width:5000px;
+    height:600px;
+}
+#rec .img img{
+    height: 600px;
+    width: 880px;
+}
+#rec .img li{
+    float: left;
+}
+#rec .num{
+    position: absolute;
+    width:100%;
+    bottom: 20px;
+    text-align:center;
+    font-size:0px;
+}
+#rec .num li{
+    width:10px;
+    height:10px;
+    background-color:#ffffff;
+    border-radius:50%;
+    display:inline-block;
+    margin:0px 3px;
+    cursor:pointer;
+}
+#rec .num .on{
+    background-color: #ff6a00;
+}
+#rec .btn{
+    width: 30px;
+    height: 50px;
+    position: absolute;
+    top: 275px;
+    background-color: #ffffff55;
+    cursor:pointer;
+    font-size:40px;
+    color:#000000;
+    line-height:50px;
+    display:none;
+}
+#rec .btn_l{
+    left: 0;
+}
+#rec .btn_r{
+    right:0;
+}
+#rec:hover .btn{
+    display: block;
+}
+#banner #hot{
+    height: 600px;
+    width: 250px;
+    float: right;
+}
+#hot .title{
+     font-size: 24px;
+     font-weight: bolder;
+     border-bottom: 1px #edcb3c solid;
+ }
+#hot .title a{
+    text-decoration: none;
+    color: #aaaaaa;
+    float: right;
+}
+#hot .title a:hover{
+    color: #1b7fcc;
+}
+.hot{
+    margin-top: 18px;
+}
+#banner .hot a{
+    height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+    padding: 10px;
+    color: #000000;
+    text-decoration: none;
+}
+#banner .hot a:hover{
+    color: #1b7fcc;
+}
+.hot span{
+    color: #aaaaaa;
+    float: right;
+}
+#rank{
+    height: 1400px;
+    width: 60%;
+    margin:20px auto;
+}
+#rank ul{
+    list-style: none;
+    background-color: #f9fcc0;
+
+}
+#rank .vertical{
+    width: 48%;
+    float: left;
+    border: white 5px  solid;
+}
+.vertical span{
+    float: right;
+}
+.vertical span a{
+    text-decoration: none;
+    color: white;
+}
+.vertical span a:hover{
+    color: #edcb3c;
+}
+#rank .vertical .head{
+    height: 40px;
+    line-height: 40px;
+    font-size: 24px;
+    color: white;
+    font-weight: bolder;
+    background-color: black;
+}
+#rank ul li ul li{
+    height: 80px;
+    line-height: 80px;
+    padding: 10px;
+    font-size: 24px;
+    color: white;
+    font-weight: bolder;
+    border-bottom: #aaaaaa 1px dashed;
+}
+#rank ul li ul li p{
+    margin-left: 30px;
+    height: 80px;
+    line-height: 80px;
+    float: left;
+}
+#rank ul li ul li a{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+}
+#rank ul li ul li a:hover{
+    color: #edcb3c;
+}
+#rank img{
+    height: 80px;
+    width: 60px;
+    float: left;
+}
